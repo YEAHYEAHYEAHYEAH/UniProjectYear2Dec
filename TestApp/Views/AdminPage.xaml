@@ -1,0 +1,61 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TrainFinder.Views"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="TrainFinder.Views.AdminPage"
+      mc:Ignorable="d"
+      d:DesignHeight="400" d:DesignWidth="960"
+      Title="AdminPage">
+
+    <Grid Width="960" Height="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label Content="Train" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" Margin="130,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="createTrainButton" Click="createTrainButton_Click" Height="27" Width="120" Content="Create Train" Margin="315,13,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Border BorderBrush="Black" BorderThickness="1" Width="305" Margin="130,50,0,0" Height="330" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Grid  HorizontalAlignment="Left" Width="295" Height="325" VerticalAlignment="Top">
+                <Label Content="Departure" Height="27" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+                <ComboBox x:Name="departureInput" HorizontalAlignment="Right" Height="27" Margin="0,10,10,0" VerticalAlignment="Top" Width="160"/>
+                <Label Content="Destination" Height="27" Width="120" Margin="0,138,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <ComboBox x:Name="destinationInput" HorizontalAlignment="Right" Height="27" Margin="0,138,10,0" VerticalAlignment="Top" Width="160"/>
+                <Label Content="Type" Height="27" Width="120" Margin="0,170,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <ComboBox x:Name="typeSelect" HorizontalAlignment="Right" Height="27" Margin="0,170,10,0" VerticalAlignment="Top" Width="160" />
+                <Label Content="Intermediates" Height="27" Width="120" Margin="0,42,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <ListBox x:Name="intermediateStations"  HorizontalAlignment="Right" Height="91" Margin="0,42,10,0" VerticalAlignment="Top" Width="160"/>
+                <Label Content="Departure Date" Height="27" Width="120" Margin="0,202,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <DatePicker HorizontalAlignment="Right" Margin="0,202,10,0" VerticalAlignment="Top" Width="160" Height="27"/>
+                <Label Content="Departure Time" Height="27" Width="120" Margin="0,234,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <xctk:TimePicker TextAlignment="Left" x:Name="departureTime" Height="27" HorizontalAlignment="Right" Margin="0,234,10,0" VerticalAlignment="Top" Padding="0" Width="160"/>
+                <Label Content="Sleeper Berth" Height="27" Width="120" Margin="0,266,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <CheckBox Height="27" Width="160" Margin="0,266,10,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <Label Content="First Class" Height="27" Width="120" Margin="0,297,0,-9" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <CheckBox Height="27" Width="160" Margin="0,298,10,-10" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            </Grid>
+        </Border>
+
+        <Label Content="Passenger" FontWeight="Bold" FontSize="16" Margin="0,10,290,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="95"/>
+        <Button x:Name="createPassengerButton" Click="createPassengerButton_Click" Height="27" Width="120" Content="Create Passenger" Margin="0,13,130,0" HorizontalAlignment="Right" VerticalAlignment="Top"></Button>
+        <Border BorderBrush="Black" BorderThickness="1" Width="255" Margin="0,50,130,0" Height="260" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Grid  HorizontalAlignment="Right" Width="255" Height="260" VerticalAlignment="Top">
+                <Label Content="Departure" Height="27" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,74,0,0"/>
+                <ComboBox  HorizontalAlignment="Left" Height="27" Margin="125,74,0,0" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Destination" Height="27" Width="120" Margin="0,106,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <ComboBox HorizontalAlignment="Left" Height="27" Margin="125,106,0,0" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Cabin" Height="27" Width="120" Margin="0,170,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <CheckBox Height="27" Width="120" Margin="125,170,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Label Content="First Class" Height="27" Width="120" Margin="0,138,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <CheckBox Height="27" Width="120" Margin="125,138,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Label Content="Name" Height="27" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+                <TextBox  HorizontalAlignment="Left" Height="27" Margin="125,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Train" Height="27" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,42,0,0"/>
+                <ComboBox  HorizontalAlignment="Left" Height="27" Margin="125,42,0,0"  VerticalAlignment="Top" Width="120"/>
+                <Label Content="Coach" Height="27" Width="120" Margin="0,197,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <ComboBox HorizontalAlignment="Left" Height="27" Margin="125,197,0,0" VerticalAlignment="Top" Width="120" />
+                <Label Content="Seat" Height="27" Width="120" Margin="0,229,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <ComboBox HorizontalAlignment="Left" Height="27" Margin="125,229,0,0" VerticalAlignment="Top" Width="120" />
+            </Grid>
+        </Border>
+        <Label Content="Test Data" FontWeight="Bold" FontSize="16" Margin="0,349,290,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="95"/>
+        <Button x:Name="testDataButton" Click="testDataButton_Click" Height="27" Width="120" Content="Create Test Data" Margin="0,352,130,0" HorizontalAlignment="Right" VerticalAlignment="Top"></Button>
+    </Grid>
+</Page>
